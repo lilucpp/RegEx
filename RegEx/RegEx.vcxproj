@@ -24,6 +24,7 @@
     <Keyword>MFCProj</Keyword>
     <RootNamespace>RegExCPP11</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <ProjectName>RegEx</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -92,9 +93,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\vs_project\vcpkg\installed\x86-windows-static\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>F:\vs_project\vcpkg\installed\x86-windows-static\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>boost_regex-vc140-mt.lib</AdditionalDependencies>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -136,11 +140,14 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\vs_project\vcpkg\installed\x86-windows-static\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>F:\vs_project\vcpkg\installed\x86-windows-static\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>boost_regex-vc140-mt.lib</AdditionalDependencies>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -179,15 +186,15 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="RegEx_CPP11.h" />
-    <ClInclude Include="RegEx_CPP11Dlg.h" />
+    <ClInclude Include="RegEx.h" />
+    <ClInclude Include="RegEx_Dlg.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="RegEx_CPP11.cpp" />
-    <ClCompile Include="RegEx_CPP11Dlg.cpp" />
+    <ClCompile Include="RegEx.cpp" />
+    <ClCompile Include="RegEx_Dlg.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -196,13 +203,13 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="RegExCPP11.rc" />
+    <ResourceCompile Include="RegEx.rc" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="res\RegExCPP11.rc2" />
+    <None Include="res\RegEx.rc2" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\RegEx_CPP11.ico" />
+    <Image Include="res\RegEx.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
