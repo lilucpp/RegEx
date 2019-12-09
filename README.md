@@ -1,12 +1,10 @@
 # RegEx
 Regular expression tool using boost::regex.
 
-
-
-![Description](./RegEx/res/Description.png)
+![Description](./res/images/Description.png)
 
 ## To do list
 
-* Highlight matches
+* ~~Highlight matches~~
 
-* Use QT instead of MFC
+* ~~Use QT instead of MFC~~
